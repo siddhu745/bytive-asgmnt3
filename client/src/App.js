@@ -31,7 +31,7 @@ function App() {
 
 
   const onclick = (value) => {
-    var updatedData = data.filter((user) => user.id != value)
+    var updatedData = data.filter((user) => user.id !== value)
     setData(updatedData)
     if(data.length === 1){
       setLoading(true)

@@ -11,7 +11,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/users");
+      const response = await axios.get("https://bytive-asgmnt3-siddhu745.onrender.com/users");
        setData(response.data)
       // console.log(response.data)
     } catch (error) {

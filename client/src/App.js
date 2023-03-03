@@ -26,7 +26,7 @@ function App() {
       setLoading(false)
     },5000)
     getUsers();
-  },[0])
+  },[])
   
 
 

@@ -1,17 +1,19 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
 const cors = require("cors");
-require('dotenv').config()
+require("dotenv").config();
+
+const port = process.env.PORT || 8000;
 
 const app = express();
 app.use(cors());
-const uri = process.env.URI
+const uri = process.env.URI;
 
 app.get("/", (req, res) => {
   res.send("hey hi");
 });
 
-app.get("/users", async (req,res) => {
+app.get("/users", async (req, res) => {
   const client = new MongoClient(uri);
 
   try {
@@ -26,6 +28,6 @@ app.get("/users", async (req,res) => {
   }
 });
 
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("server running on port 8000");
 });
